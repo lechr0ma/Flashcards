@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap);
+
+
+body { font-family: 'Raleway', sans-serif;
+    background-image: url('world.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+    .quiz-area{ width: 60vw;
+        background: rgba(240, 248, 255, .5);
+        border-radius: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10vh;
+        padding: 5vh 0;
+    }
+    .header{ border-radius: 2vw;
+        background: #2a9d8f;
+        color: #264653;
+        width: 39vw;
+        margin: 2em auto;
+        line-height: .5em;
+        padding: 0 0 0 1vw;
+
+    }
+    .questions {
+
+        background-color:#2a9d8f;
+        width: 50em;
+        display: flex;
+        flex-flow: row wrap;
+        border-radius: 2vw;
+    }
+    .card{
+        position: relative;
+        font-size: 1.5em;
+        font-weight: bold;
+        border-radius: 1vw;
+        background: #e9c46a;
+        color: #264653;
+        width: 10em;
+        height: 10em;
+        margin: 1vw auto;
+        text-align: center;
+        transition: transform 1s ease;
+        transform-style: preserve-3d;
+    }
+    .card:hover {
+        transform: rotateY(180deg);
+
+    }
+    .front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        backface-visibility: hidden;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+
+    }
+    .back {
+        border-radius: inherit;
+        background-color: #f4a261;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        width:100%;
+        z-index: -1;
+        transform: rotateY(180deg);
+    }
+    .container { border-radius: inherit;
+        height: 100%;
+        width:100%;
+        backface-visibility: hidden;
+        z-index: 0;
+        transition: transform 1s ease;
+        transform-style: preserve-3d;
+    }
